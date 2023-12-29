@@ -1,0 +1,25 @@
+# https://docs.docker.com/compose/compose-file/
+
+version: '3.7'
+services:
+  db:
+    image: postgres:11.13
+    restart: always
+    environment:
+      - POSTGRES_USER=manager
+      - POSTGRES_PASSWORD=1234567
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@manager.com 
+      - PGADMIN_DEFAULT_PASSWORD=1234567
+    ports:
+      - '5050:80'
+volumes:
+  postgres:

@@ -1,0 +1,20 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": ["error", "double"],
+    "space-before-blocks": ["error", "always"],
+    "no-multi-spaces": "error",
+    "no-trailing-spaces": "error",
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }],
+    "indent": ["error", 2],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "arrow-body-style": ["error", "as-needed"],
+    "prefer-template": "error",
+    "semi": ["error", "always"]
+  }
+}

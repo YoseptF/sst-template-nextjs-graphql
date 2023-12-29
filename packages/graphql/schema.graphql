@@ -1,0 +1,18 @@
+type Billboard {
+  createdAt: String!
+  deletedAt: String
+  description: String!
+  id: ID!
+  title: String!
+  updatedAt: String
+  userId: ID!
+}
+
+type Mutation {
+  createBillboard(description: String!, title: String!, userID: String!): Billboard!
+}
+
+type Query {
+  billboard(billboardID: String!): Billboard!
+  billboards: [Billboard!]!
+}
